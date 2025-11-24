@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>导航中心</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<style>
+body { font-family: Arial, sans-serif; margin: 0; background: #f7f8fa; }
+header { padding: 40px 20px; text-align: center; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+h1 { margin: 0; font-size: 28px; }
+p.subtitle { margin: 10px 0 0; color: #666; }
+
+.tabs { display: flex; flex-wrap: wrap; justify-content: center; margin: 20px auto; gap: 8px; }
+.tab-btn { padding: 10px 18px; border: none; background: #e5e7eb; cursor: pointer; border-radius: 6px; font-size: 15px; }
+.tab-btn.active { background: #2563eb; color: #fff; }
+
+.tab-content { display: none; padding: 20px; }
+.tab-content.active { display: block; }
+
+.card-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
+.card { width: 180px; background: #fff; padding: 20px; border-radius: 12px; text-decoration: none; color: #000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.15s; text-align: center; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+.card-title { margin-top: 10px; font-size: 16px; font-weight: 600; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>网络服务导航</h1>
+  <p class="subtitle">你现在可以访问更多内容了，选择分类开始浏览</p>
+</header>
+
+<div class="tabs">
+  <button class="tab-btn active" data-target="common">常用服务</button>
+  <button class="tab-btn" data-target="entertainment">影视娱乐</button>
+  <button class="tab-btn" data-target="chat">聊天通讯</button>
+  <button class="tab-btn" data-target="tools">工具 / 生产力</button>
+  <button class="tab-btn" data-target="news">新闻媒体</button>
+</div>
+
+<!-- 常用服务 -->
+<div class="tab-content active" id="common">
+  <div class="card-grid">
+    <a class="card" href="common/google.html"><div class="card-title"><i class="fab fa-google"></i> Google</div></a>
+    <a class="card" href="common/youtube.html"><div class="card-title"><i class="fab fa-youtube"></i> YouTube</div></a>
+    <a class="card" href="common/github.html"><div class="card-title"><i class="fab fa-github"></i> GitHub</div></a>
+    <a class="card" href="common/instagram.html"><div class="card-title"><i class="fab fa-instagram"></i> Instagram</div></a>
+    <a class="card" href="common/twitter.html"><div class="card-title"><i class="fab fa-twitter"></i> Twitter / X</div></a>
+  </div>
+</div>
+
+<!-- 影视娱乐 -->
+<div class="tab-content" id="entertainment">
+  <div class="card-grid">
+    <a class="card" href="entertainment/netflix.html"><div class="card-title"><i class="fas fa-film"></i> Netflix</div></a>
+    <a class="card" href="entertainment/disneyplus.html"><div class="card-title"><i class="fas fa-magic"></i> Disney+</div></a>
+    <a class="card" href="entertainment/primevideo.html"><div class="card-title"><i class="fas fa-video"></i> Prime Video</div></a>
+    <a class="card" href="entertainment/hbomax.html"><div class="card-title"><i class="fas fa-tv"></i> HBO Max</div></a>
+  </div>
+</div>
+
+<!-- 聊天通讯 -->
+<div class="tab-content" id="chat">
+  <div class="card-grid">
+    <a class="card" href="chat/telegram.html"><div class="card-title"><i class="fab fa-telegram"></i> Telegram</div></a>
+    <a class="card" href="chat/whatsapp.html"><div class="card-title"><i class="fab fa-whatsapp"></i> WhatsApp</div></a>
+    <a class="card" href="chat/messenger.html"><div class="card-title"><i class="fab fa-facebook-messenger"></i> Messenger</div></a>
+    <a class="card" href="chat/discord.html"><div class="card-title"><i class="fab fa-discord"></i> Discord</div></a>
+  </div>
+</div>
+
+<!-- 工具生产力 -->
+<div class="tab-content" id="tools">
+  <div class="card-grid">
+    <a class="card" href="tools/googledrive.html"><div class="card-title"><i class="fab fa-google-drive"></i> Google Drive</div></a>
+    <a class="card" href="tools/notion.html"><div class="card-title"><i class="fas fa-sticky-note"></i> Notion</div></a>
+    <a class="card" href="tools/figma.html"><div class="card-title"><i class="fab fa-figma"></i> Figma</div></a>
+    <a class="card" href="tools/dropbox.html"><div class="card-title"><i class="fab fa-dropbox"></i> Dropbox</div></a>
+  </div>
+</div>
+
+<!-- 新闻媒体 -->
+<div class="tab-content" id="news">
+  <div class="card-grid">
+    <a class="card" href="news/bbc.html"><div class="card-title"><i class="fas fa-newspaper"></i> BBC</div></a>
+    <a class="card" href="news/cnn.html"><div class="card-title"><i class="fas fa-broadcast-tower"></i> CNN</div></a>
+    <a class="card" href="news/nytimes.html"><div class="card-title"><i class="fas fa-newspaper"></i> New York Times</div></a>
+    <a class="card" href="news/economist.html"><div class="card-title"><i class="fas fa-chart-line"></i> Economist</div></a>
+  </div>
+</div>
+
+<script>
+const tabs = document.querySelectorAll('.tab-btn');
+const contents = document.querySelectorAll('.tab-content');
+
+tabs.forEach(btn => {
+  btn.addEventListener('click', () => {
+    tabs.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    contents.forEach(c => c.classList.remove('active'));
+    document.getElementById(btn.dataset.target).classList.add('active');
+  });
+});
+</script>
+
+</body>
+</html>
