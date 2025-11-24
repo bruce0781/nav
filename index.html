@@ -19,9 +19,11 @@ p.subtitle { margin: 10px 0 0; color: #666; }
 .tab-content.active { display: block; }
 
 .card-grid { display: flex; flex-wrap: wrap; gap: 16px; justify-content: center; }
-.card { width: 180px; background: #fff; padding: 20px; border-radius: 12px; text-decoration: none; color: #000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.15s; text-align: center; }
+.card { width: 220px; background: #fff; padding: 30px 20px; border-radius: 12px; text-decoration: none; color: #000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: 0.15s; text-align: center; }
 .card:hover { transform: translateY(-4px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
-.card-title { margin-top: 10px; font-size: 16px; font-weight: 600; }
+.card-icon { font-size: 48px; margin-bottom: 16px; }
+.card-title { margin-bottom: 8px; font-size: 18px; font-weight: 600; }
+.card-description { font-size: 13px; color: #666; line-height: 1.4; }
 </style>
 </head>
 <body>
@@ -42,51 +44,135 @@ p.subtitle { margin: 10px 0 0; color: #666; }
 <!-- 常用服务 -->
 <div class="tab-content active" id="common">
   <div class="card-grid">
-    <a class="card" href="common/google.html"><div class="card-title"><i class="fab fa-google"></i> Google</div></a>
-    <a class="card" href="common/youtube.html"><div class="card-title"><i class="fab fa-youtube"></i> YouTube</div></a>
-    <a class="card" href="common/github.html"><div class="card-title"><i class="fab fa-github"></i> GitHub</div></a>
-    <a class="card" href="common/instagram.html"><div class="card-title"><i class="fab fa-instagram"></i> Instagram</div></a>
-    <a class="card" href="common/twitter.html"><div class="card-title"><i class="fab fa-twitter"></i> Twitter / X</div></a>
+    <a class="card" href="common/google.html">
+      <div class="card-icon"><i class="fab fa-google"></i></div>
+      <div class="card-title">Google</div>
+      <div class="card-description">全球领先的搜索引擎和互联网服务提供商</div>
+    </a>
+    <a class="card" href="common/youtube.html">
+      <div class="card-icon"><i class="fab fa-youtube"></i></div>
+      <div class="card-title">YouTube</div>
+      <div class="card-description">全球最大的视频分享和观看平台</div>
+    </a>
+    <a class="card" href="common/github.html">
+      <div class="card-icon"><i class="fab fa-github"></i></div>
+      <div class="card-title">GitHub</div>
+      <div class="card-description">全球最大的代码托管和协作开发平台</div>
+    </a>
+    <a class="card" href="common/instagram.html">
+      <div class="card-icon"><i class="fab fa-instagram"></i></div>
+      <div class="card-title">Instagram</div>
+      <div class="card-description">流行的照片和视频社交分享平台</div>
+    </a>
+    <a class="card" href="common/twitter.html">
+      <div class="card-icon"><i class="fab fa-twitter"></i></div>
+      <div class="card-title">Twitter / X</div>
+      <div class="card-description">全球实时信息和社交网络平台</div>
+    </a>
   </div>
 </div>
 
 <!-- 影视娱乐 -->
 <div class="tab-content" id="entertainment">
   <div class="card-grid">
-    <a class="card" href="entertainment/netflix.html"><div class="card-title"><i class="fas fa-film"></i> Netflix</div></a>
-    <a class="card" href="entertainment/disneyplus.html"><div class="card-title"><i class="fas fa-magic"></i> Disney+</div></a>
-    <a class="card" href="entertainment/primevideo.html"><div class="card-title"><i class="fas fa-video"></i> Prime Video</div></a>
-    <a class="card" href="entertainment/hbomax.html"><div class="card-title"><i class="fas fa-tv"></i> HBO Max</div></a>
+    <a class="card" href="entertainment/netflix.html">
+      <div class="card-icon"><i class="fas fa-film"></i></div>
+      <div class="card-title">Netflix</div>
+      <div class="card-description">全球领先的流媒体视频订阅服务平台</div>
+    </a>
+    <a class="card" href="entertainment/disneyplus.html">
+      <div class="card-icon"><i class="fas fa-magic"></i></div>
+      <div class="card-title">Disney+</div>
+      <div class="card-description">迪士尼官方流媒体平台，汇集经典动画与大片</div>
+    </a>
+    <a class="card" href="entertainment/primevideo.html">
+      <div class="card-icon"><i class="fas fa-video"></i></div>
+      <div class="card-title">Prime Video</div>
+      <div class="card-description">亚马逊的视频流媒体服务和原创内容平台</div>
+    </a>
+    <a class="card" href="entertainment/hbomax.html">
+      <div class="card-icon"><i class="fas fa-tv"></i></div>
+      <div class="card-title">HBO Max</div>
+      <div class="card-description">HBO旗下高品质影视内容流媒体平台</div>
+    </a>
   </div>
 </div>
 
 <!-- 聊天通讯 -->
 <div class="tab-content" id="chat">
   <div class="card-grid">
-    <a class="card" href="chat/telegram.html"><div class="card-title"><i class="fab fa-telegram"></i> Telegram</div></a>
-    <a class="card" href="chat/whatsapp.html"><div class="card-title"><i class="fab fa-whatsapp"></i> WhatsApp</div></a>
-    <a class="card" href="chat/messenger.html"><div class="card-title"><i class="fab fa-facebook-messenger"></i> Messenger</div></a>
-    <a class="card" href="chat/discord.html"><div class="card-title"><i class="fab fa-discord"></i> Discord</div></a>
+    <a class="card" href="chat/telegram.html">
+      <div class="card-icon"><i class="fab fa-telegram"></i></div>
+      <div class="card-title">Telegram</div>
+      <div class="card-description">安全快速的云端即时通讯应用</div>
+    </a>
+    <a class="card" href="chat/whatsapp.html">
+      <div class="card-icon"><i class="fab fa-whatsapp"></i></div>
+      <div class="card-title">WhatsApp</div>
+      <div class="card-description">全球最受欢迎的免费即时通讯应用之一</div>
+    </a>
+    <a class="card" href="chat/messenger.html">
+      <div class="card-icon"><i class="fab fa-facebook-messenger"></i></div>
+      <div class="card-title">Messenger</div>
+      <div class="card-description">Facebook旗下的即时通讯和视频聊天应用</div>
+    </a>
+    <a class="card" href="chat/discord.html">
+      <div class="card-icon"><i class="fab fa-discord"></i></div>
+      <div class="card-title">Discord</div>
+      <div class="card-description">面向游戏玩家和社区的语音视频聊天平台</div>
+    </a>
   </div>
 </div>
 
 <!-- 工具生产力 -->
 <div class="tab-content" id="tools">
   <div class="card-grid">
-    <a class="card" href="tools/googledrive.html"><div class="card-title"><i class="fab fa-google-drive"></i> Google Drive</div></a>
-    <a class="card" href="tools/notion.html"><div class="card-title"><i class="fas fa-sticky-note"></i> Notion</div></a>
-    <a class="card" href="tools/figma.html"><div class="card-title"><i class="fab fa-figma"></i> Figma</div></a>
-    <a class="card" href="tools/dropbox.html"><div class="card-title"><i class="fab fa-dropbox"></i> Dropbox</div></a>
+    <a class="card" href="tools/googledrive.html">
+      <div class="card-icon"><i class="fab fa-google-drive"></i></div>
+      <div class="card-title">Google Drive</div>
+      <div class="card-description">谷歌云端存储和文件协作服务</div>
+    </a>
+    <a class="card" href="tools/notion.html">
+      <div class="card-icon"><i class="fas fa-sticky-note"></i></div>
+      <div class="card-title">Notion</div>
+      <div class="card-description">集笔记、数据库和协作于一体的生产力工具</div>
+    </a>
+    <a class="card" href="tools/figma.html">
+      <div class="card-icon"><i class="fab fa-figma"></i></div>
+      <div class="card-title">Figma</div>
+      <div class="card-description">基于浏览器的UI设计和协作工具</div>
+    </a>
+    <a class="card" href="tools/dropbox.html">
+      <div class="card-icon"><i class="fab fa-dropbox"></i></div>
+      <div class="card-title">Dropbox</div>
+      <div class="card-description">云存储和文件同步服务平台</div>
+    </a>
   </div>
 </div>
 
 <!-- 新闻媒体 -->
 <div class="tab-content" id="news">
   <div class="card-grid">
-    <a class="card" href="news/bbc.html"><div class="card-title"><i class="fas fa-newspaper"></i> BBC</div></a>
-    <a class="card" href="news/cnn.html"><div class="card-title"><i class="fas fa-broadcast-tower"></i> CNN</div></a>
-    <a class="card" href="news/nytimes.html"><div class="card-title"><i class="fas fa-newspaper"></i> New York Times</div></a>
-    <a class="card" href="news/economist.html"><div class="card-title"><i class="fas fa-chart-line"></i> Economist</div></a>
+    <a class="card" href="news/bbc.html">
+      <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+      <div class="card-title">BBC</div>
+      <div class="card-description">英国广播公司，全球权威新闻媒体</div>
+    </a>
+    <a class="card" href="news/cnn.html">
+      <div class="card-icon"><i class="fas fa-broadcast-tower"></i></div>
+      <div class="card-title">CNN</div>
+      <div class="card-description">美国有线电视新闻网，国际新闻领导者</div>
+    </a>
+    <a class="card" href="news/nytimes.html">
+      <div class="card-icon"><i class="fas fa-newspaper"></i></div>
+      <div class="card-title">New York Times</div>
+      <div class="card-description">美国权威报纸，深度报道和分析</div>
+    </a>
+    <a class="card" href="news/economist.html">
+      <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+      <div class="card-title">Economist</div>
+      <div class="card-description">全球商业和时事分析的权威杂志</div>
+    </a>
   </div>
 </div>
 
