@@ -6,12 +6,20 @@
 <title>Google - 导航中心</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 <style>
-body { font-family: Arial, sans-serif; margin: 0; background: #f7f8fa; }
-header { padding: 40px 20px; text-align: center; background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.05); position: relative; }
-header h1 { margin: 0; font-size: 28px; }
-header p.subtitle { margin: 10px 0 0; color: #666; }
-.back-btn { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); padding: 10px 18px; background: #e5e7eb; color: #333; text-decoration: none; border-radius: 6px; font-size: 15px; transition: 0.15s; }
-.back-btn:hover { background: #d1d5db; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f7f8fa; display: flex; min-height: 100vh; }
+
+/* Sidebar Navigation */
+.sidebar { width: 250px; background: #fff; box-shadow: 2px 0 8px rgba(0,0,0,0.05); display: flex; flex-direction: column; position: fixed; left: 0; top: 0; bottom: 0; overflow-y: auto; }
+.sidebar-header { padding: 30px 20px; text-align: center; border-bottom: 1px solid #e5e7eb; }
+.sidebar-header h1 { font-size: 20px; margin: 0; }
+.sidebar-header p { font-size: 12px; color: #666; margin: 8px 0 0; }
+.tabs { display: flex; flex-direction: column; padding: 20px 10px; gap: 8px; }
+.tab-btn { padding: 12px 18px; border: none; background: #f7f8fa; cursor: pointer; border-radius: 6px; font-size: 15px; text-align: left; transition: 0.15s; text-decoration: none; color: #000; display: block; }
+.tab-btn:hover { background: #e5e7eb; }
+.tab-btn.active { background: #2563eb; color: #fff; }
+
+/* Main Content */
+.main-content { margin-left: 250px; flex: 1; display: flex; flex-direction: column; }
 .container { max-width: 800px; margin: 40px auto; background: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center; }
 h2 { font-size: 32px; margin-bottom: 20px; }
 p { font-size: 18px; line-height: 1.6; margin-bottom: 30px; }
@@ -21,16 +29,29 @@ a.btn:hover { background: #1d4ed8; }
 </head>
 <body>
 
-<header>
-  <a href="../index.html" class="back-btn"><i class="fas fa-arrow-left"></i> 返回</a>
-  <h1>网络服务导航</h1>
-  <p class="subtitle">你现在可以访问更多内容了，选择分类开始浏览</p>
-</header>
-
-<div class="container">
-<h2><i class="fab fa-google"></i> Google</h2>
-<p>Google 是世界上最受欢迎的搜索引擎，提供快速、准确的搜索结果。同时，它还提供邮件、文档、云存储等服务。</p>
-<a class="btn" href="https://www.google.com" target="_blank">访问 Google</a>
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+  <div class="sidebar-header">
+    <h1>网络服务导航</h1>
+    <p>你现在可以访问更多内容了</p>
+  </div>
+  <div class="tabs">
+    <a class="tab-btn active" href="../index.html#common">常用服务</a>
+    <a class="tab-btn" href="../index.html#entertainment">影视娱乐</a>
+    <a class="tab-btn" href="../index.html#chat">聊天通讯</a>
+    <a class="tab-btn" href="../index.html#tools">工具 / 生产力</a>
+    <a class="tab-btn" href="../index.html#news">新闻媒体</a>
+  </div>
 </div>
+
+<!-- Main Content -->
+<div class="main-content">
+  <div class="container">
+    <h2><i class="fab fa-google"></i> Google</h2>
+    <p>Google 是世界上最受欢迎的搜索引擎，提供快速、准确的搜索结果。同时，它还提供邮件、文档、云存储等服务。</p>
+    <a class="btn" href="https://www.google.com" target="_blank">访问 Google</a>
+  </div>
+</div>
+
 </body>
 </html>
